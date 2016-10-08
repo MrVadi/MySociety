@@ -5,12 +5,6 @@
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin">
 
-    <RelativeLayout
-        android:id="@+id/top_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true">
-
         <ImageView
             android:id="@+id/info_photo"
             android:layout_width="100dp"
@@ -68,7 +62,6 @@
             android:layout_toEndOf="@+id/info_photo"
             android:layout_toRightOf="@+id/info_photo"
             android:gravity="center" />
-    </RelativeLayout>
 
     <TextView
         android:id="@+id/linked_in"
@@ -76,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/top_block"
+        android:layout_below="@+id/info_photo"
         />
 
     <TextView
@@ -98,5 +91,78 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/about_me_title" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/made"
+        android:id="@+id/text_made"
+        android:visibility="gone"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_above="@+id/text_with"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/with"
+        android:id="@+id/text_with"
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        android:textSize="20sp"
+        android:textAllCaps="true"
+        android:layout_above="@+id/droid"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/droid"
+        android:visibility="gone"
+        android:src="@drawable/ic_android_white_48dp"
+        android:tint="@android:color/holo_green_dark"
+        android:layout_margin="10dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/by"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:id="@+id/text_by"
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        android:layout_below="@+id/droid"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mrvadi"
+        android:id="@+id/text_mrvadi"
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        android:textSize="20sp"
+        android:layout_below="@+id/text_by"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/return_btn"
+        android:layout_width="200dp"
+        android:layout_height="@dimen/card_height_splash"
+        android:text="@string/return_back"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button.Colored"
+        />
 
 </RelativeLayout>

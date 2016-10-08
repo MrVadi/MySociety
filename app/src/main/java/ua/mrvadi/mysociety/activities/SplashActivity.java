@@ -150,16 +150,12 @@ public class SplashActivity extends BaseActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                splashGreeting.animate().alpha(1.0f).setDuration(1000);
                 splashLogo.animate().translationY(0)
                         .setDuration(1000).withEndAction(new Runnable() {
                     @Override
                     public void run() {
-                        splashGreeting.animate().alpha(1.0f).setDuration(500)
-                                .withEndAction(new Runnable() {
-                                                    @Override
-                                                    public void run() {switchActivity();
-                                                    }
-                                                });
+                        switchActivity();
                     }
 
                 });

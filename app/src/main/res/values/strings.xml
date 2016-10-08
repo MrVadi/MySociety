@@ -11,10 +11,14 @@
     <string name="admin_first_name">Vadym</string>
     <string name="admin_last_name">Lytvynenko</string>
     <string name="admin_date_of_birth">04 Jan 1994</string>
-    <string name="admin_info">I \'m passionate all about android development. Algorithms
+    <string name="admin_info">
+    <![CDATA[
+        I \'m passionate all about android development. Algorithms
         , pretty designs, polished products that\'s that\'s my point of view. Fast learner
         and clean coder that\s all about me. I\'m always focus on a skills improvement and self-development.
-         Thank you for your attention. Now please tap %1$s times on my photo. </string>
+         Thank you for your attention. Now please tap <font color="#00000">%1$s</font> times on my photo.
+    ]]>
+    </string>
     <string name="about_me">About me</string>
     <string name="no_contacts_available">No contacts</string>
     <string name="please_login">Please login</string>
@@ -40,4 +44,9 @@
     <string name="back_again">Click BACK again to exit</string>
     <string name="contacts">Contacts</string>
     <string name="log_out">Log out</string>
+    <string name="made">Made</string>
+    <string name="with">with</string>
+    <string name="by">by</string>
+    <string name="mrvadi">MrVadi</string>
+    <string name="return_back">return back</string>
 </resources>

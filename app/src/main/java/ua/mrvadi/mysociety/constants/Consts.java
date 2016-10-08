@@ -20,7 +20,8 @@ public class Consts {
     public static final String PHONE_NUM_STATE = "PHONE_NUM";
     public static final String PHOTO_STATE = "PHOTO";
 
-    public static final String TAP_COUNTER = "TAP_COUNTER";
+    public static final String TAP_COUNTER_STATE = "TAP_COUNTER";
+    public static final String SHAKED_STATE = "SHAKED";
 
 //    public static final int FRAGMENT_UPDATE_REQUEST_CODE = 123;
     public static final int GALLERY_REQUEST = 100;
