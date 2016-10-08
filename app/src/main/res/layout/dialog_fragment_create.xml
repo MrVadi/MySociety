@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:padding="@dimen/activity_horizontal_margin">
+
+
+    <ua.mrvadi.mysociety.widgets.RoundedImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/crate_dialog_photo"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/create_first_name_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toStartOf="@+id/crate_dialog_photo"
+        android:layout_toLeftOf="@+id/crate_dialog_photo"
+        >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_height_splash"
+        android:hint="@string/dialog_first_name"
+        android:imeOptions="actionNext|flagNoExtractUi"
+        android:maxLines="1"
+        android:inputType="text"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/create_last_name_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/create_first_name_wrapper"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toStartOf="@+id/crate_dialog_photo"
+        android:layout_toLeftOf="@+id/crate_dialog_photo"
+        >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_height_splash"
+        android:hint="@string/dialog_last_name"
+        android:imeOptions="actionNext|flagNoExtractUi"
+        android:maxLines="1"
+        android:inputType="text"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/create_phone_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/crate_dialog_photo">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_height_splash"
+            android:hint="@string/dialog_phone_num"
+            android:imeOptions="actionDone|flagNoExtractUi"
+            android:inputType="phone"
+            android:drawablePadding="10dp" />
+    </android.support.design.widget.TextInputLayout>
+</RelativeLayout>
+</ScrollView>

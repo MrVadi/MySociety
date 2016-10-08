@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_remove_photo"
+        android:title="Remove photo" />
+    <item
+        android:id="@+id/menu_take_new_photo"
+        android:title="Take new photo" />
+    <item
+        android:id="@+id/menu_choose_new_from_gallery"
+        android:title="Select new photo from Gallery"/>
+</menu>
