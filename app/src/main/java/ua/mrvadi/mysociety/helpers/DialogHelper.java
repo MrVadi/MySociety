@@ -9,7 +9,6 @@ import android.provider.Settings;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
-import android.widget.Toast;
 
 import ua.mrvadi.mysociety.R;
 

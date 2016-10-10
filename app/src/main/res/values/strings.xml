@@ -49,4 +49,8 @@
     <string name="by">by</string>
     <string name="mrvadi">MrVadi</string>
     <string name="return_back">return back</string>
+    <string name="name">Name</string>
+    <string name="action_call">call</string>
+    <string name="action_edit">edit</string>
+    <string name="action_delete">delete</string>
 </resources>

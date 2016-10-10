@@ -38,7 +38,7 @@ import ua.mrvadi.mysociety.widgets.RoundedImageView;
 /**
  * Created by mrvadi on 04.10.16.
  */
-public class ContactDialogFragment extends DialogFragment {
+public class CreateEditDialogFragment extends DialogFragment {
 
     private RoundedImageView photo;
     private TextInputLayout firstName;
@@ -371,10 +371,13 @@ public class ContactDialogFragment extends DialogFragment {
                     && savedInstanceState.getString(Consts.PHONE_NUM_STATE) != null)
                 phoneNumber.getEditText().setText(savedInstanceState.getString(Consts.PHONE_NUM_STATE));
 
-            if (savedInstanceState.getByteArray(Consts.PHOTO_STATE) != null)
+            if (savedInstanceState.getByteArray(Consts.PHOTO_STATE) != null) {
                 photo.setImageBitmap(ImageHelper.
                         bitmapFromBytes(savedInstanceState.getByteArray(Consts.PHOTO_STATE)));
                 photo.setBackground(null);
+            } else {
+                photo.setBackground(getResources().getDrawable(R.drawable.background_dummy_photo));
+            }
         }
     }
 }

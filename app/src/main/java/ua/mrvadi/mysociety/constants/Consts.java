@@ -17,8 +17,10 @@ public class Consts {
 
     public static final String FIRST_NAME_STATE = "FIRST_NAME";
     public static final String LAST_NAME_STATE = "LAST_NAME";
+    public static final String DISPLAY_NAME_STATE = "DISPLAY_NAME";
     public static final String PHONE_NUM_STATE = "PHONE_NUM";
     public static final String PHOTO_STATE = "PHOTO";
+    public static final String COLOR_STATE = "COLOR";
 
     public static final String TAP_COUNTER_STATE = "TAP_COUNTER";
     public static final String SHAKED_STATE = "SHAKED";

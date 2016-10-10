@@ -47,8 +47,6 @@ public class ContactsFragment extends Fragment {
     private Contact callContact;
 
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View fragmentView = inflater.inflate(R.layout.fragment_contacts, container, false);
@@ -97,6 +95,7 @@ public class ContactsFragment extends Fragment {
         touchListener.setClickable(new RecyclerTouchListener.OnRowClickListener() {
             @Override
             public void onRowClicked(int position) {
+                showContact(adapter.getItem(position));
             }
 
             @Override
@@ -119,7 +118,7 @@ public class ContactsFragment extends Fragment {
     }
 
     private void showCreateDialog() {
-        DialogFragment dialogFragment = new ContactDialogFragment();
+        DialogFragment dialogFragment = new CreateEditDialogFragment();
         dialogFragment.setTargetFragment(ContactsFragment.this, 123);
         new MrFragmentManager((HomeActivity) getActivity())
                 .fullScreenDialog(dialogFragment);
@@ -130,7 +129,19 @@ public class ContactsFragment extends Fragment {
         Bundle arguments = new Bundle();
         arguments.putInt("ID", contact.getId());
 
-        DialogFragment dialogFragment = new ContactDialogFragment();
+        DialogFragment dialogFragment = new CreateEditDialogFragment();
+        dialogFragment.setArguments(arguments);
+        dialogFragment.setTargetFragment(ContactsFragment.this, 123);
+        new MrFragmentManager((HomeActivity) getActivity())
+                .fullScreenDialog(dialogFragment);
+
+    }
+
+    private void showContact(Contact contact) {
+        Bundle arguments = new Bundle();
+        arguments.putInt("ID", contact.getId());
+
+        DialogFragment dialogFragment = new ShowDialogFragment();
         dialogFragment.setArguments(arguments);
         dialogFragment.setTargetFragment(ContactsFragment.this, 123);
         new MrFragmentManager((HomeActivity) getActivity())
@@ -255,16 +266,17 @@ public class ContactsFragment extends Fragment {
                             DialogHelper.showRationale(getContext(),
                                     R.string.rationale_calls,
                                     new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                     performCall(callContact);
-                                }
-                            });
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            performCall(callContact);
+                                        }
+                                    });
                         }
                     } else if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
                         performCall(callContact);
                     }
-                } break;
+                }
+                break;
         }
     }
 

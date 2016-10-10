@@ -3,8 +3,8 @@ package ua.mrvadi.mysociety;
 import android.app.Application;
 import android.content.SharedPreferences;
 
+import ua.mrvadi.mysociety.constants.Consts;
 import ua.mrvadi.mysociety.helpers.DBHelper;
-import ua.mrvadi.mysociety.helpers.ImageHelper;
 import ua.mrvadi.mysociety.models.Admin;
 import ua.mrvadi.mysociety.models.Contact;
 
@@ -30,14 +30,14 @@ public class MySocietyApp extends Application {
     }
 
     private void manageFirstRun() {
-        prefs = getSharedPreferences("ua.mrvadi.mysociety", MODE_PRIVATE);
-        isFirstTime = prefs.getBoolean("FIRST_RUN", true);
+        prefs = getSharedPreferences(Consts.PACKAGE_NAME, MODE_PRIVATE);
+        isFirstTime = prefs.getBoolean(Consts.FIRST_RUN, true);
         if (isFirstTime) {
             dbHelper = DBHelper.getInstance();
             dbHelper.createAdminInfo(getApplicationContext());
             admin = dbHelper.getAdminInfo();
             dbHelper.addContact(myContact());
-            prefs.edit().putBoolean("FIRST_RUN", false).apply();
+            prefs.edit().putBoolean(Consts.FIRST_RUN, false).apply();
         }
 
     }
