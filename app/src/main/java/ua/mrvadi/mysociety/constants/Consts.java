@@ -36,5 +36,4 @@ public class Consts {
 
     public static final int START_ANIMATION_DELAY = 750;
 
-
 }
